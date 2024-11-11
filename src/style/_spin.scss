@@ -1,0 +1,23 @@
+.spin-wrap {
+
+  width: 100px;
+  height: 100px;
+
+  .spin {
+    $spin-width: 8px;
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    background: conic-gradient(blue 0%, lightgray 0%);
+
+    &::after {
+      @include after-init;
+      top: $spin-width;
+      bottom: $spin-width;
+      left: $spin-width;
+      right: $spin-width;
+    }
+  }
+}
