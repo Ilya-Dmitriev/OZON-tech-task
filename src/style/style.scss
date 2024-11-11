@@ -1,5 +1,7 @@
-@import "./palette";
-@import "./mixins";
+@import "./assets/palette";
+@import "./assets/sizes";
+@import "./assets/mixins";
+@import "./layout";
 @import "../components/label/label";
 @import "../components/progress/progress";
 @import "../components/input/input";

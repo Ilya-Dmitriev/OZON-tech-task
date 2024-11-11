@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+.app-box {
+  max-width: $max-view;
+  min-width: $min-view;
+  height: $min-view;
+  padding: $box-padding;
+
+  position: relative;
+  box-sizing: border-box;
+
+  display: flex;
+  gap: $font-size;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  .app-name {
+    position: absolute;
+    top: $box-padding;
+    left: $box-padding;
+  }
+
+
+  .input-container {
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (width < $max-view) {
+  .app-box {
+    height: $max-view;
+    max-width: $min-view;
+    flex-direction: column;
+  }
+}
