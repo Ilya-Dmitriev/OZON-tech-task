@@ -1,0 +1,16 @@
+$input-width: 38px;
+$input-height: 24px;
+
+.input {
+  appearance: none;
+  display: inline-block;
+  box-sizing: border-box;
+
+  width: $input-width;
+  height: $input-height;
+  margin: 0;
+  padding: 0;
+
+  border-radius: calc($input-height/2);
+  border: none;
+}

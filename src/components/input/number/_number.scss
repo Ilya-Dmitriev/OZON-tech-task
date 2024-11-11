@@ -1,0 +1,13 @@
+.number-input {
+  text-align: center;
+  border: 1px solid $black_main;
+
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
