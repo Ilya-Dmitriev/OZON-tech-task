@@ -11,16 +11,6 @@ const progressMeta = {
   },
 };
 
-function generateCheckbox() {
-  let isActive = false;
-  return {
-    checked: isActive,
-    toggle: (forcedValue) => {
-      isActive = forcedValue === undefined ? !isActive : forcedValue;
-    },
-  };
-}
-
 function initClassActions({ element, className }) {
   function addClass() {
     if (!element.classList.contains(className))
