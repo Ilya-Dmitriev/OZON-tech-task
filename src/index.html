@@ -10,12 +10,19 @@
 </head>
 
 <body>
-  <div class="label">Label</div>
-  <input class="input checkbox-input" type="checkbox" />
-  <input class="input number-input" type="number" min="0" max="100">
-  <div class="spin-wrap">
-    <div class="spin"></div>
-  </div>
+  <div class="spin" data-state="normal" data-value="0"></div>
+  <label class="label">
+    <input class="input number-input value" type="number">
+    <span class="label-name">Value</span>
+  </label>
+  <label class="label">
+    <input class="input checkbox-input animate" type="checkbox" />
+    <span class="label-name">Animate</span>
+  </label>
+  <label class="label">
+    <input class="input checkbox-input hide" type="checkbox" />
+    <span class="label-name">Hide</span>
+  </label>
 </body>
 
 </html>

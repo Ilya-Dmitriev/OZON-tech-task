@@ -1,23 +1,35 @@
-.spin-wrap {
+$spin-width: 8px;
 
-  width: 100px;
-  height: 100px;
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
 
-  .spin {
-    $spin-width: 8px;
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-    width: 100%;
-    height: 100%;
-    position: relative;
-    border-radius: 50%;
-    background: conic-gradient(blue 0%, lightgray 0%);
+.spin {
+  --percent: 0%;
+  --spin-size: 100px;
+  --hidden: hidden;
 
-    &::after {
-      @include after-init;
-      top: $spin-width;
-      bottom: $spin-width;
-      left: $spin-width;
-      right: $spin-width;
-    }
+  width: var(--spin-size);
+  height: var(--spin-size);
+  position: relative;
+  border-radius: 50%;
+  background: conic-gradient($blue_main var(--percent), $gray_light var(--percent));
+
+  &.active {
+    animation: rotation 10s linear infinite;
+  }
+
+  &::after {
+    @include after-init;
+    top: $spin-width;
+    bottom: $spin-width;
+    left: $spin-width;
+    right: $spin-width;
   }
 }
