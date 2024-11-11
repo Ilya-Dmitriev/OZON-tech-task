@@ -1,5 +1,7 @@
 @import "./palette";
 @import "./mixins";
-@import "./label";
-@import "./inputs";
-@import "./spin";
+@import "../components/label/label";
+@import "../components/progress/progress";
+@import "../components/input/input";
+@import "../components/input/checkbox/checkbox";
+@import "../components/input/number/number";

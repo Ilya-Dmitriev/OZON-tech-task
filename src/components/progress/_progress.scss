@@ -1,0 +1,42 @@
+$progress-width: 8px;
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progress-wrap {
+  width: 100px;
+  height: 100px;
+
+  .progress {
+    --percent: 0%;
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    background: conic-gradient($blue_main var(--percent), $gray_light var(--percent));
+
+    &.animated {
+      animation: rotation 10s linear infinite;
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    &::after {
+      @include after-init;
+      top: $progress-width;
+      bottom: $progress-width;
+      left: $progress-width;
+      right: $progress-width;
+    }
+  }
+}
