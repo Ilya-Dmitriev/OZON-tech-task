@@ -1,0 +1,12 @@
+.label {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  cursor: pointer;
+
+  .label-name {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+  }
+}

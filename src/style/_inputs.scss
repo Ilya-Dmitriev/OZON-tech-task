@@ -1,0 +1,59 @@
+$input-width: 38px;
+$input-height: 24px;
+
+$checkbox-duration: 0.2s;
+$checkbox-offset: 2px;
+$checkbox-size: $input-height - $checkbox-offset * 2;
+
+
+.input {
+  appearance: none;
+  display: inline-block;
+  box-sizing: border-box;
+
+  width: $input-width;
+  height: $input-height;
+  margin: 0;
+  padding: 0;
+
+  border-radius: $input-height/2;
+  border: none;
+}
+
+.checkbox-input {
+  position: relative;
+  background: $gray_light;
+  transition-duration: $checkbox-duration;
+  cursor: pointer;
+
+  &::after {
+    @include after-init;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    top: $checkbox-offset;
+    left: $checkbox-offset;
+    transition-duration: $checkbox-duration;
+  }
+
+  &:checked {
+    background: $blue_main;
+
+    &::after {
+      left: calc(100% - ($checkbox-size + $checkbox-offset));
+    }
+  }
+}
+
+.number-input {
+  text-align: center;
+  border: 1px solid $black_main;
+
+
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
