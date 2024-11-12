@@ -3,8 +3,7 @@ body {
 }
 
 .app-box {
-  max-width: $max-view;
-  min-width: $min-view;
+  width: $max-view;
   height: $min-view;
   padding: $box-padding;
 
@@ -32,10 +31,10 @@ body {
   }
 }
 
-@media (width < $max-view) {
+@media all and (max-width < $max-view) {
   .app-box {
     height: $max-view;
-    max-width: $min-view;
+    width: $min-view;
     flex-direction: column;
   }
 }
