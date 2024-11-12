@@ -35,7 +35,6 @@ body {
   display: inline-flex;
   gap: 16px;
   align-items: center;
-  cursor: pointer;
 }
 .label .label-name {
   font-size: 16px;
