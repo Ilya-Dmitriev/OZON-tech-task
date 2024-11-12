@@ -32,7 +32,7 @@ body {
   }
 }
 
-@media screen and (width < $max-view) {
+@media (width < $max-view) {
   .app-box {
     height: $max-view;
     max-width: $min-view;

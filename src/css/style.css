@@ -26,7 +26,7 @@ body {
   flex-direction: column;
 }
 
-@media screen and (width < 568px) {
+@media (width < 568px) {
   .app-box {
     height: 568px;
     max-width: 320px;
