@@ -1,5 +1,7 @@
-function initCheckboxInput({ elementClassName, changeCallback }) {
+function initCheckboxInput({ elementClassName, changeCallback, initValue }) {
   const checkboxInput = document.querySelector(elementClassName);
+
+  checkboxInput.checked = initValue;
 
   checkboxInput.addEventListener("change", (event) => {
     changeCallback(event.target.checked);

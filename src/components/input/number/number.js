@@ -1,23 +1,9 @@
-function generateNumValidation({ min, max }) {
-  let oldNum = min;
-  return (newNum) => {
-    if (newNum > max) return oldNum;
-    oldNum = min;
-    if (newNum < min) return min;
-    oldNum = newNum;
-    return newNum * 1;
-  };
-}
-
-function initValueInput({ elementClassName, changeCallback, min, max }) {
+function initValueInput({ elementClassName, changeCallback, initValue }) {
   const valueInput = document.querySelector(elementClassName);
-  const valueValidation = generateNumValidation({ min, max });
 
-  valueInput.value = min;
+  valueInput.value = initValue;
 
   valueInput.addEventListener("input", (event) => {
-    const value = valueValidation(event.target.value);
-    valueInput.value = value;
-    changeCallback(value);
+    valueInput.value = changeCallback(event.target.value);
   });
 }
