@@ -4,8 +4,7 @@ body {
 
 .app-box {
   max-width: 568px;
-  min-width: 320px;
-  height: 320px;
+  min-height: 320px;
   padding: 16px;
   position: relative;
   box-sizing: border-box;
@@ -26,10 +25,9 @@ body {
   flex-direction: column;
 }
 
-@media (width < 568px) {
+@media all and (width < 568px) {
   .app-box {
-    height: 568px;
-    max-width: 320px;
+    min-height: 568px;
     flex-direction: column;
   }
 }

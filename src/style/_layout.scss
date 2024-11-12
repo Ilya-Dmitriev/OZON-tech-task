@@ -3,8 +3,8 @@ body {
 }
 
 .app-box {
-  width: $max-view;
-  height: $min-view;
+  max-width: $max-view;
+  min-height: $min-view;
   padding: $box-padding;
 
   position: relative;
@@ -23,7 +23,6 @@ body {
     left: $box-padding;
   }
 
-
   .input-container {
     display: flex;
     gap: 14px;
@@ -31,10 +30,9 @@ body {
   }
 }
 
-@media all and (max-width < $max-view) {
+@media all and (width < $max-view) {
   .app-box {
-    height: $max-view;
-    width: $min-view;
+    min-height: $max-view;
     flex-direction: column;
   }
 }
